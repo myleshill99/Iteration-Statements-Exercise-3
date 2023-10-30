@@ -85,7 +85,7 @@
 
         //Heatin Up Section:
         //Write a method to check if an integer(from the user) is in the range -10 to 10
-        public static void InRange()
+        public static bool InRange()
         {
             //how do I determine if two numbers are the same?
             if (-10 == 10)
@@ -93,7 +93,7 @@
                 return true;
 
             }
-            
+
             return false;
 
 
@@ -101,28 +101,23 @@
 
 
         //Write a method to display the multiplication table(from 1 to 12) of a given integer
-        public static bool
-            {
-            //how do I determine if two numbers are the same?
-            if (1 == 12);
-
-            {
-                return true;
-            }
-            return false;
-
-        }
-
-
-
-
-
-
-    //Call the methods to test them in the Main method below
-    static void Main(string[] args)
+        public static void MultTable()
         {
-            // Print1000();    
+            Console.WriteLine("please enter an integer");
+            var userInput = int.Parse(Console.ReadLine());
+            for (int i = 1; i <=12; i++)
+            {
+                Console.WriteLine($"{userInput} x {i} = {userInput * i}");
+            }
         }
 
 
+        //Call the methods to test them in the Main method below
+        static void Main(string[] args)
+        {
+            // Print1000(); 
+            MultTable(); 
 
+        }
+    }
+}
